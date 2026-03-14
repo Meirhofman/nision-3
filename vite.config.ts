@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: './',
+  base: '',
   server: {
     host: true, // Allow access from mobile on same network (e.g. http://192.168.x.x:5173)
     port: 5173,
