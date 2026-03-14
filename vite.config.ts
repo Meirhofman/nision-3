@@ -23,9 +23,9 @@ export default defineConfig({
     open: false, // Don't auto-open browser
   },
   build: {
-    // Optimize build for faster development
+    // Optimize build for production
     sourcemap: true,
-    minify: false,
+    minify: true,
   },
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
@@ -33,7 +33,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: './',
   resolve: {
     alias: {
       // Alias @ to the src directory
