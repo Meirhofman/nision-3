@@ -5,6 +5,7 @@ import { MobileContainer } from '../components/MobileContainer';
 import { useApp } from '../context/AppContext';
 import { Settings, Star, Utensils, Users, Dumbbell, Sparkles } from 'lucide-react';
 import { Character } from '../components/Character';
+import { CLOTHING_ITEMS } from './CharacterScreen';
 
 export const MainScreen = () => {
   const { t, points, characterState, currentUser, userData, language, darkMode } = useApp();

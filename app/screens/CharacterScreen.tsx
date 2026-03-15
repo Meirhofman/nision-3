@@ -30,7 +30,7 @@ interface Item {
     price?: number;
 }
 
-const CLOTHING_ITEMS: Item[] = [
+export const CLOTHING_ITEMS: Item[] = [
     // T-Shirts
     { id: 'green_hoodie', name: 'הודי ירוק', image: greenHoodie, type: 'shirt' },
     { id: 'purple_shirt', name: 'חולצה סגולה', image: purpleShirt, type: 'shirt' },
