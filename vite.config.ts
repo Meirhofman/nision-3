@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import path from 'path'
+import path, { resolve } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -10,6 +10,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '',
   build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html')
+      }
+    },
     // Optimize build for production
     sourcemap: true,
     minify: true,
