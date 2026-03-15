@@ -9,6 +9,16 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   base: '',
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    },
+    // Optimize build for production
+    sourcemap: true,
+    minify: true,
+  },
   server: {
     host: true, // Allow access from mobile on same network (e.g. http://192.168.x.x:5173)
     port: 5173,
@@ -22,11 +32,6 @@ export default defineConfig({
       overlay: true, // Show error overlay
     },
     open: false, // Don't auto-open browser
-  },
-  build: {
-    // Optimize build for production
-    sourcemap: true,
-    minify: true,
   },
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
