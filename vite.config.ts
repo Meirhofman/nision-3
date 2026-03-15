@@ -11,9 +11,7 @@ export default defineConfig({
   base: '',
   build: {
     rollupOptions: {
-      input: {
-        main: './index.html'
-      }
+      input: './index.html'
     },
     // Optimize build for production
     sourcemap: true,
